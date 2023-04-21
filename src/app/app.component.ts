@@ -7,7 +7,7 @@ import { TranslocoService } from '@ngneat/transloco';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-first-angular-app';
+  title = 'webpage';
   constructor(private translocoService: TranslocoService) {}
 
   switchLang(lang: string) {
