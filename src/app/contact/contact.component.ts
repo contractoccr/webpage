@@ -10,16 +10,16 @@ import { FormBuilder, FormGroup, FormControl, Validators} from '@angular/forms';
 export class ContactComponent implements OnInit 
 {
   
-form: FormGroup;
+  form: FormGroup;
   name: FormControl = new FormControl("", [Validators.required]);
   email: FormControl = new FormControl("", [Validators.required, Validators.email]);
   phone: FormControl = new FormControl("", [Validators.required, Validators.pattern('[- +()0-9]+')]);
   object: FormControl = new FormControl("", [Validators.required, Validators.minLength(5)]);
   message: FormControl = new FormControl("", [Validators.required, Validators.maxLength(256)]);
   honeypot: FormControl = new FormControl(""); // we will use this to prevent spam
-submitted: boolean = false; // show and hide the success message
-isLoading: boolean = false; // disable the submit button if we're loading
-responseMessage: string = ""; // the response message to show to the user
+  submitted: boolean = false; // show and hide the success message
+  isLoading: boolean = false; // disable the submit button if we're loading
+  responseMessage: string = ""; // the response message to show to the user
   response: any;
 
 constructor (private formBuilder: FormBuilder, private http: HttpClient) {
