@@ -48,5 +48,7 @@
 "contact-form-error-4":"Por favor ingrese un teléfono válido",
 "contact-form-5":"Mensaje",
 "contact-form-error-5":"Por favor ingrese un mensaje",
-"contact-form-6":"Enviar"
+"contact-form-6":"Enviar",
+"contact-form-7":"Gracias por contactarnos, nos pondremos en contacto con usted lo más pronto posible.",
+"contact-form-8":"Error al enviar el mensaje, por favor intente de nuevo."
 }

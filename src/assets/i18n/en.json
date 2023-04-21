@@ -22,7 +22,7 @@
 "remodel":"Remodeling",
 "remodel-text":"We have a wide range of remodeling services, in which we offer the highest standards of work, providing long life and durability to any service required by the client.",
 "inspections":"Inspections",
-"inspections-text":"We are a responsible company, therefore we are in charge of verifying and inspecting that the work has been carried out correctly and with the expected quality for the client.",
+"inspections-text":"We are a responsible company, so we are in charge of inspecting that the work has been done correctly and with the expected quality.",
 "training":"Staff training",
 "training-text":"We are a 100% customer-oriented company, therefore we strive to train each of our workers to provide a comprehensive service.",
 "repair":"Repair work",
@@ -48,5 +48,7 @@
 "contact-form-error-4":"Please enter a phone number",
 "contact-form-5":"Message",
 "contact-form-error-5":"Please enter a message",
-"contact-form-6":"Send"
+"contact-form-6":"Send",
+"contact-form-7":"Thanks for the message! I'll get back to you soon!",
+"contact-form-8":"Oops! Something went wrong... Reload the page and try again."
 }
