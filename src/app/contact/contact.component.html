@@ -1,0 +1,65 @@
+<ng-container *transloco="let t">
+<section id="contact" class="contact-area pt-125 pb-130 gray-bg">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="section-title text-center pb-20">
+                    <h5 class="sub-title mb-15">{{ t('contact-1') }}</h5>
+                    <h2 class="title">{{ t('contact-2') }}</h2>
+                </div> <!-- section title -->
+            </div>
+        </div> <!-- row -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="contact-form">
+                    <form id="contact-form" [formGroup]="form" method="post" (ngSubmit)="onSubmit()" data-toggle="validator">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="single-form form-group">
+                                    <input type="text" name="name" placeholder="{{ t('contact-form-1') }}" formControlName="name" data-error="Name is required." required="required">
+                                    <mat-error *ngIf="name.invalid">{{ t('contact-form-error-1') }}</mat-error>
+                                </div> <!-- single form -->
+                            </div>
+                            <div class="col-md-6">
+                                <div class="single-form form-group">
+                                    <input type="email" name="email" placeholder="{{ t('contact-form-2') }}" formControlName="email" data-error="Valid email is required." required="required">
+                                    <mat-error *ngIf="email.invalid">{{ t('contact-form-error-2') }}</mat-error>
+                                </div> <!-- single form -->
+                            </div>
+                            <div class="col-md-6">
+                                <div class="single-form form-group">
+                                    <input type="text" name="subject" placeholder="{{ t('contact-form-3') }}" formControlName="object" data-error="Subject is required." required="required">
+                                    <mat-error *ngIf="object.invalid">{{ t('contact-form-error-3') }}</mat-error>
+                                </div> <!-- single form -->
+                            </div>
+                            <div class="col-md-6">
+                                <div class="single-form form-group">
+                                    <input type="text" name="phone" placeholder="{{ t('contact-form-4') }}" formControlName="phone" data-error="Phone is required." required="required">
+                                    <mat-error *ngIf="phone.invalid">{{ t('contact-form-error-4') }}</mat-error>
+                                </div> <!-- single form -->
+                            </div>
+                            <div class="col-md-12">
+                                <div class="single-form form-group">
+                                    <textarea placeholder="{{ t('contact-form-5') }}" formControlName="message" name="Mensaje" data-error="Please,leave us a message." required="required"></textarea>
+                                    <mat-hint align="end"> {{message.value?.length || 0}}/256</mat-hint>
+                                    <mat-error *ngIf="message.invalid"> {{ t('contact-form-error-5') }}</mat-error>
+                                </div> <!-- single form -->
+                            </div>
+                            <p class="form-message"></p>
+                            <div class="col-md-12">
+                                <div class="single-form form-group text-center">
+                                    <button [disabled]="isLoading" class="submit" type="submit" class ="main-btn">{{ t('contact-form-6') }}</button>
+                                </div> <!-- single form -->
+                                <input formControlName="honeypot" hidden type="text" />
+                                <div [ngClass]="!submitted? 'hidden' : 'visible'" class="center-text">
+                                  <span>{{responseMessage}}</span>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </form>
+                </div> <!-- row -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</section>
+</ng-container>
