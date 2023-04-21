@@ -9,7 +9,6 @@ import {
 } from '@ngneat/transloco';
 import { Injectable, isDevMode, NgModule } from '@angular/core';
 
-
 @Injectable({ providedIn: 'root' })
 export class TranslocoHttpLoader implements TranslocoLoader {
   constructor(private http: HttpClient) {}
